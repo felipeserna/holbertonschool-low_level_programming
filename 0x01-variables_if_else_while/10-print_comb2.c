@@ -14,11 +14,13 @@ for (c = 48 ; c <= 57; c++)
 {
 	for (d = 48; d <= 57; d++)
 	{
-	putchar(c);
-	putchar(d);
-	if (c != 57 || d != 57)
-	putchar(44);
-	putchar(32);
+		putchar(c);
+		putchar(d);
+		if (c != 57 || d != 57)
+		{
+			putchar(44);
+			putchar(32);
+		}
 }
 }
 putchar('\n');
