@@ -19,13 +19,10 @@ void more_numbers(void)
 			b = i % 10;
 			if (i > 9)
 			{
-				_putchar(a + '0');
-				_putchar(b + '0');
+			_putchar(a + '0');
 			}
-			else
-			{
-				_putchar(i + '0');
-			}
+			_putchar(b + '0');
+
 		}
 		_putchar('\n');
 	}
