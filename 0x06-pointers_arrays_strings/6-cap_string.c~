@@ -1,10 +1,10 @@
 #include "holberton.h"
 /**
- * string_toupper - changes all lowercase letters of a string to uppercase
+ * cap_string - capitalizes all words of a string
  * @str: array of type char
  * Return: str
  */
-char *string_toupper(char *str)
+char *cap_string(char *str)
 {
 	int i;
 
