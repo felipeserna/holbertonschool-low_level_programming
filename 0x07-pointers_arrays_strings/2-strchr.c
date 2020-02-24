@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
  * _strchr - locates a character in a string
- * @s: string
- * @c: character
+ * @s: string to check
+ * @c: character to locate
  * Return: a pointer to the first occurrence of c, or NULL
  */
 char *_strchr(char *s, char c)
@@ -13,8 +13,13 @@ char *_strchr(char *s, char c)
 	{
 		if (s[i] == c)
 		{
-			return (s + i);
+			break;
 		}
 	}
-	return (s + i);
+
+	if (s[i] == c)
+	{
+		return (&s[i]);
+	}
+	return ('\0');
 }
