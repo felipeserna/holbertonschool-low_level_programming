@@ -1,10 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "holberton.h"
 /**
  * main - prints all arguments it receives
- * @s: Letter to check
- * Return: nothing
+ * @argc: argument count
+ * @argv: argument vector
+ * Return: 0
  */
-void main()
+int main(int argc, char *argv[])
 {
+	int i;
+
+	for (i = 0; i < argc; i++)
+	{
+		printf("%s\n", argv[i]);
+	}
+	return (0);
 }
