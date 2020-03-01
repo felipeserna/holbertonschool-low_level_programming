@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+/**
+ * main - multiplies two numbers
+ * @s: Letter to check
+ * Return: nothing
+ */
+void main()
+{
+}

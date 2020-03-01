@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+/**
+ * main - prints the name of program
+ * @s: Letter to check
+ * Return: nothing
+ */
+void main()
+{
+}
