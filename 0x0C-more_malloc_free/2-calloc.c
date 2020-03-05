@@ -7,11 +7,11 @@
  * @size: bytes to set to zero
  * Return: nothing
  */
-void init_zero(char *p, int nmemb)
+void init_zero(char *p, int size)
 {
 	int i = 0;
 
-	for (i = 0; i < nmemb; i++)
+	for (i = 0; i < size; i++)
 	{
 		p[i] = '\0';
 	}
@@ -41,7 +41,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	init_zero(p, size);
+	init_zero(p, size * nmemb);
 
 	return (p);
 }
