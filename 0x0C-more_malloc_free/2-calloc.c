@@ -7,11 +7,11 @@
  * @size: bytes to set to zero
  * Return: nothing
  */
-void init_zero(char *p, int size)
+void init_zero(char *p, int nmemb)
 {
 	int i = 0;
 
-	for (i = 0; i < size; i++)
+	for (i = 0; i < nmemb; i++)
 	{
 		p[i] = '\0';
 	}
