@@ -41,7 +41,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	init_zero((char *)p, size);
+	init_zero(p, size);
 
 	return (p);
 }
