@@ -4,8 +4,8 @@
 /**
  * _realloc - reallocates a memory block using malloc and free
  * @ptr: minimum number
- * @old_size: maximum number
- * @new_size:
+ * @old_size: old size
+ * @new_size: new size
  * Return: pointer to the array, NULL if malloc fails
  * or if min is greater than max
  */
