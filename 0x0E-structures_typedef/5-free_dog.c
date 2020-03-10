@@ -2,10 +2,9 @@
 #include <stdlib.h>
 
 /**
- * free_dog - function that frees dog structure variables.
- * @d: pointer to dog variable.
- *
- * Return: void.
+ * free_dog - frees dog structure variables
+ * @d: pointer to dog variable
+ * Return: nothing
  */
 
 void free_dog(dog_t *d)
