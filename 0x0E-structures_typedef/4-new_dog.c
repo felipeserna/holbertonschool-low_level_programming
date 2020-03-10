@@ -18,7 +18,7 @@ int _strlen(char *s)
 	return (i);
 }
 /**
- * _strcpy - unction that copies the string pointed to by src
+ * _strcpy - copies the string pointed to by src
  *@dest: char
  *@src:_ char
  * Return: dest
@@ -42,14 +42,14 @@ char *_strcpy(char *dest, char *src)
 
 /**
  *new_dog - define a new type
- * @name: dog name
- * @age: dog age
- * @owner: dog owner
+ * @name: dog's name
+ * @age: dog's age
+ * @owner: dog's owner
  *Return: new_dog
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *newdo;
+	dog_t *newdog;
 	int len1 = 0, len2 = 0;
 	char *newname, *newowner;
 
@@ -66,9 +66,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(newname);
 		return (NULL);
 	}
-	newdo = malloc(sizeof(dog_t));
+	newdog = malloc(sizeof(dog_t));
 
-	if (!newdo)
+	if (!newdog)
 	{
 		free(newname);
 		free(newowner);
@@ -76,8 +76,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	_strcpy(newname, name);
 	_strcpy(newowner, owner);
-	newdo->name = newname;
-	newdo->age = age;
-	newdo->owner = newowner;
-	return (newdo);
+	newdog->name = newname;
+	newdog->age = age;
+	newdog->owner = newowner;
+	return (newdog);
 }
