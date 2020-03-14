@@ -7,16 +7,16 @@
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	unsigned int s = 0, k = 1;
-	char *x;
+	unsigned int a = 0, b = 1;
+	char *c;
 
 	while (format)
 	{
 		va_start(ap, format);
-		while (*(format + s))
+		while (*(format + a))
 		{
-			k = 1;
-			switch (*(format + s))
+			b = 1;
+			switch (*(format + a))
 			{
 			case 'c':
 				printf("%c", va_arg(ap, int));
@@ -28,18 +28,18 @@ void print_all(const char * const format, ...)
 				printf("%f", va_arg(ap, double));
 				break;
 			case 's':
-				x = va_arg(ap, char *);
-				if (x == NULL)
-					x = "(nil)";
-				printf("%s", x);
+				c = va_arg(ap, char *);
+				if (c == NULL)
+					c = "(nil)";
+				printf("%s", c);
 				break;
 			default:
-				k = 0;
+				b = 0;
 				break;
 			}
-			if (*(format + s + 1) && k)
+			if (*(format + a + 1) && b)
 				printf(", ");
-			s++;
+			a++;
 		}
 		va_end(ap);
 		break;
