@@ -1,29 +1,27 @@
 #include "lists.h"
 /**
  * print_list - prints all the elements of a list_t list
- * @h: struct dog
+ * @h: list structure
  * Return: number of nodes
  */
 size_t print_list(const list_t *h)
 {
-	char *str;
+	size_t length = 0;
 
-	if (str == NULL)
-		printf([0] (nil));
-
-	if (d == NULL)
+	while (h != NULL)
 	{
-		return;
+		if (h->str == NULL)
+		{
+			printf("[0] (nil)\n");
+			h = h->next;
+			length++;
+		}
+		else
+		{
+			printf("[%d] %s\n", h->len, h->str);
+			h = h->next;
+			length += 1;
+		}
 	}
-	if (d->name == NULL)
-	{
-		d->name = "(nil)";
-	}
-	if (d->owner == NULL)
-	{
-		d->owner = "(nil)";
-	}
-	printf("Name: %s\n", d->name);
-	printf("Age: %f\n", d->age);
-	printf("Owner: %s\n", d->owner);
+	return (length);
 }
