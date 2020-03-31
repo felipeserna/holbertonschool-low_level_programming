@@ -17,17 +17,19 @@ int create_file(const char *filename, char *text_content)
 	if (o == -1)
 		return (-1);
 
-	if (text_content)
-	{
-		while (text_content[r] != '\0')
-			r++;
+	if (!text_content)
+		return (1);
 
-		w = write(o, text_content, r);
+	for (r = 0; text_content[r] != '\0'; r++)
+	{
 	}
 
-	if (w == -1 || w != r)
+	w = write(o, text_content, r);
+
+	if (w == -1)
 	{
-		return (-1);
+		close(o);
+		return (1);
 	}
 
 	close(o);
