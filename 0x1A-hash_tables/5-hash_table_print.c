@@ -10,14 +10,14 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int index;
 	int flag = 0;
 
-	if (ht)
+	if (ht != NULL)
 	{
-		putchar('{');
+		printf("{");
 
 		for (index = 0; index < ht->size; index++)
 		{
 			tmp = ht->array[index];
-			while (tmp)
+			while (tmp != NULL)
 			{
 				if (flag == 1)
 				{
